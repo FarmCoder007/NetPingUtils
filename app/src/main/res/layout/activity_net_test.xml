@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="18dp"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入要测试的域名" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_type"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButton_ping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="ping"/>
+
+        <RadioButton
+            android:id="@+id/radioButton_dig"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dig"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_start_ping"
+            android:text="开始"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_end_ping"
+            android:text="停止"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_copy"
+            android:text="复制"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/button_clear"
+            android:text="清屏"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView_ping_log"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
+
+</LinearLayout>
